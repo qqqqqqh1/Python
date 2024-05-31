@@ -1,5 +1,7 @@
 nums = list(map(int, input().split()))
 num = int(input())
-nums.append(num)
-nums.sort(reverse=True)
-print(nums.index(num) + 1)
+pos = 1
+for position in nums:
+    if position >= num:
+        pos += 1
+print(pos)
