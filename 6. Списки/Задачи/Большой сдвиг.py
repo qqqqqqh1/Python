@@ -1,3 +1,4 @@
 nums = list(map(int, input().split()))
 n = int(input())
-print(nums[-n:]+nums[:-n])
+nums = nums[-n:] + nums[:-n]
+print(*nums, sep=' ')

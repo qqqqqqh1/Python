@@ -1,6 +1,8 @@
-def sef():
+def reverse():
     a = int(input())
     if a != 0:
-        sef()
+        reverse()
         print(a)
-print(sef())
+
+
+print(reverse())

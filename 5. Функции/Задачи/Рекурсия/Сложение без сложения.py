@@ -4,4 +4,6 @@ def sum(a, b):
     if b > 0:
         return sum(a, b)
     return a
+
+
 print(sum(2, 2))
