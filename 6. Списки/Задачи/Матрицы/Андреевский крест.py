@@ -1,7 +1,5 @@
-rows = int(input())
-cols = rows
-matrix = [[i * j for j in range(cols)] for i in range(rows)]
+n = int(input())
+matrix = [["1" if i + j == n-1 or i == j else "0" for j in range(n)] for i in range(n)]
 for row in matrix:
-    for elem in row:
-        print(f'{elem:<3d}', end='')
-    print()
+    print(*row)
+print()
