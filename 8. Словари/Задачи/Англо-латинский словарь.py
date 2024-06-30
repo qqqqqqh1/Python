@@ -1,12 +1,12 @@
 wordbook = {}
 
 for i in range(int(input())):
-    eng, lat = input().split('-')
-    lat = lat.split(',')
+    eng, lat = input().split(' - ')
+    lat = lat.split(', ')
     for word in lat:
-        wordbook[word] = wordbook.get(word, '') + eng + ','
+        wordbook[word] = [eng] if word not in wordbook else wordbook[word].append(eng)
 
 print(len(wordbook))
 
 for words in sorted(wordbook.keys()):
-    print(f'{words} - {wordbook[words][:-1]}')
+    print(f"{words} - {', '.join(wordbook[words])}")
