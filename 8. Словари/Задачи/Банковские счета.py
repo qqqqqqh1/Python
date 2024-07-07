@@ -6,7 +6,6 @@ bank = {}
 def DEPOSIT(name, sum):
     bank[name] = bank.get(name, 0) + sum
 
-
 def WITHDRAW(name, sum):
     if bank[name] > 0:
         bank[name] = bank.get(name, 0) - sum
