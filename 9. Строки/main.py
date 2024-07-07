@@ -1,4 +1,3 @@
-s = 'hello world'
+s = 'AAAAAAAAAAAAAAAA'
 
-print(s)
-
+print(s.count('AA'))
