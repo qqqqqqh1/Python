@@ -1,2 +1,1 @@
-a = input()
-print(a.count(' ') + 1)
+print(len(input().split()))

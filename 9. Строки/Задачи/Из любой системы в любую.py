@@ -19,6 +19,6 @@ def convert(num_10, k, m):
 n = input()
 k, m = map(int, input().split())
 
-num_10 = int(n,k)
+num_10 = int(n, k)
 
 print(convert(num_10, 10, m))

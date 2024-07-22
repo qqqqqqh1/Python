@@ -3,11 +3,11 @@ count = 0
 new_str = ''
 
 letters = {
-    'a':'b',
-    'A':'B',
-    'b':'a',
-    'B':'A'
-    }
+    'a': 'b',
+    'A': 'B',
+    'b': 'a',
+    'B': 'A'
+}
 
 for letter in old_str:
     if letter in letters:
