@@ -1,8 +1,7 @@
-scores = {9: [], 10: [], 11:[]}
+scores = {9: [], 10: [], 11: []}
 
 with open('input(1).txt', encoding='utf-8') as f:
-    lines = f.readlines()
-    for line in lines:
+    for line in f:
         liness = line.strip().split()
         first_name, last_name, rank, score = liness
         rank, score = float(rank), float(score)
