@@ -1,20 +1,7 @@
-def censor_word(word):
-    lenn = len(word)
-    char = ''
-    if lenn > 2:
-        word = list(word)
-        for i in range(1, lenn-1):
-            word[i] = '*'
-        for x in range(lenn):
-            char += word[x]
-        return char
-    else:
-        return word
-
-def swap_words(text, censor):
+def censor_words(text, censor):
     for word in censor:
-        censorr = censor_word(word)
-        text = text.replace(word, censorr)
+        new_word = word[0] + (len(word) - 2) * '*' + word[-1]
+        text = text.replace(word, new_word)
     return text
 
 lst = []
@@ -28,4 +15,4 @@ with open('censored.txt', encoding='utf-8') as d:
         for words in wordss:
             lst.append(words)
 
-print(swap_words(line_true, lst))
+print(censor_words(line_true, lst))
