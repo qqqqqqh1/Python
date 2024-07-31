@@ -4,15 +4,7 @@ def censor_words(text, censor):
         text = text.replace(word, new_word)
     return text
 
-lst = []
 
-with open('input(5).txt', encoding='utf-8') as f:
-    line_true = f.readline()
-
-with open('censored.txt', encoding='utf-8') as d:
-    for line in d:
-        wordss = line.split()
-        for words in wordss:
-            lst.append(words)
-
+line_true = open('input(5).txt', encoding='utf-8').read()
+lst = open('censored.txt', encoding='utf-8').readlines()
 print(censor_words(line_true, lst))
