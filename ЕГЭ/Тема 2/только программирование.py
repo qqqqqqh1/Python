@@ -13,5 +13,7 @@ for x1, x2, x3 in product([0, 1], repeat=3):
     # Проверка на уникальность строк
     if len(table) == len(set(table)):
         for p in permutations('xyz'):
+            # all(x1, x2, ...) - принимает значения и возвращает true, если все значения истины
+            # zip(коллекция_1, коллекция_2) - # TODO
             if all(f(**dict(zip(p, s))) == s[-1] for s in table):
                 print(p)
